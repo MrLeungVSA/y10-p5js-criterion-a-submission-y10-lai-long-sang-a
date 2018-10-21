@@ -28,12 +28,12 @@ function draw()
 			fill(248,89,255);
 			stroke(51,70,190);
 			textSize(120);
-			text("U HV LIGMA",button2X-200,button2Y);
-			text("U HV LIGMA",0,200)
-			text("U HV LIGMA",0,300)
-			text("U HV LIGMA",0,500)
-			text("U HV LIGMA",0,600)
-			text("U HV LIGMA",0,700)					
+			text("Song",button2X-200,button2Y);
+			text("Song",0,200)
+			text("Song",0,300)
+			text("Song",0,500)
+			text("Song",0,600)
+			text("Song",0,700)					
 		}
 	}
 	else
@@ -47,7 +47,7 @@ function draw()
 	fill(255,255,255);
 	stroke(0,0,0);
 	textSize(12);
-	text("Balls",215,40);
+	text("House",215,40);
 
 	// Example 1: easy to understand - End
 
@@ -66,14 +66,18 @@ function draw()
 			fill(255,0,0);
 			stroke(0,0,0);
 			textSize(120);
-			text("Balls",400,300);
+			text("1",500,300);
+			text("2",500,400);
+			text("3",500,500);
+			text("4",500,600);
+			text("5",500,700);
 		}
 
 		rect(button2X,button2Y,100,50);
 		textSize(120);
 		fill(255,255,255);
 		stroke(0,0,0);
-		text("LIGMA",0,300);
+		text("Alphabet",0,300);
 	}
 	else
 	{
