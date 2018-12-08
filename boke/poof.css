@@ -1,0 +1,10 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #323232;
+  justify-content: center;
+  align-items: center;
+}
+
+.Pads {
+	border: 5px solid red;
+}
