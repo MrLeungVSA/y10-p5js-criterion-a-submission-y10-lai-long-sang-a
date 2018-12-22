@@ -14,6 +14,7 @@ function preloadIntro()
 	EzHov = loadImage('https://raw.githubusercontent.com/MrLeungVSA/y10-p5js-criterion-a-submission-y10-lai-long-sang-a/master/Images4code/Easy%20Click.png');
 	HrdHov = loadImage('https://raw.githubusercontent.com/MrLeungVSA/y10-p5js-criterion-a-submission-y10-lai-long-sang-a/master/Images4code/HArd%20Click.png');
 	MedHov = loadImage('https://raw.githubusercontent.com/MrLeungVSA/y10-p5js-criterion-a-submission-y10-lai-long-sang-a/master/Images4code/Medium%20Click.png');
+	pick = loadImage("https://raw.githubusercontent.com/MrLeungVSA/y10-p5js-criterion-a-submission-y10-lai-long-sang-a/master/code%20img/diff.png");
 }
 
 function setupIntro()
@@ -88,6 +89,8 @@ function drawIntro()
 	rect(mouseX-50,mouseY,100,2)
 	rect(mouseX,mouseY-50,2,100)
 	ellipse(mouseX,mouseY,20,20);
+
+	image(pick,550,0)
 }
 
 

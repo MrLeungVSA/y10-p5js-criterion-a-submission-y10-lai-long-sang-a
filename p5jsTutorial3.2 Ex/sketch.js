@@ -13,6 +13,7 @@ function preload()
 	preloadMainmenu();
 	preloadEasy();
 	preloadHArd();
+	preloadTutorial();
 }
 
 function setup()
@@ -21,10 +22,11 @@ function setup()
 	setupMainmenu();
 	setupEasy();
 	setupHArd();
+	setupTutorial();
 
 	CanvasID = 1;
 
-	createCanvas(600,600);
+	createCanvas(1200,600);
 }
 
 function draw()
@@ -58,6 +60,11 @@ function draw()
 	if (CanvasID == 6)
 	{
 		drawShooter();
+	}
+
+	if (CanvasID == 7)
+	{
+		drawTutorial();
 	}
 }
 

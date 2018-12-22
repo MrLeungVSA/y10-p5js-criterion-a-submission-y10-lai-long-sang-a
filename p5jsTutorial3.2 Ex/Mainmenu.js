@@ -51,6 +51,6 @@ function ChangeCanvas(){
 
 	if (loading == 600)
 	{
-		CanvasID = 2;
+		CanvasID = 7;
 	}
 }

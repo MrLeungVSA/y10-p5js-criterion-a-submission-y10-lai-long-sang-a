@@ -22,7 +22,7 @@ function drawHealth(setGameOverCanvasID)
 	textSize(50)
 	text(health/50+"HP",x+60,120)
 	strokeWeight(1);
-	if (health <= 0)
+	if (health <= 1)
 	{
 		canvasID = setGameOverCanvasID;
 	}

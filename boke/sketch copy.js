@@ -1,5 +1,5 @@
-var V = 500
-var S = 500
+var V = 1
+var S = 1
 var A 
 var round = 1
 var tik = 10
@@ -7,8 +7,10 @@ var R = 1
 var F = 1
 var GG = false
 var Oof 
-var Question = ["which is the correct syntax?","what is a arguement?","which is a parameter","What is a function"]
+var Question = ["which is the correct syntax?","Is an function a class?","which is a parameter","What is a function"]
 var Desround = ["Round 1","Round 2","Round 3","Round 4","Round 5","Round 6","Round 7","Final Round"]
+var Respond1 = ["Yes"]
+var Respond2 = ["No"]
 var gam = 0
 var Ques = 0
 var HP = 200
@@ -16,9 +18,7 @@ var quek
 var canvasID
 var Hour
 var beck
-var ball = 1;
-var balln = 1;
-var ballrate = 5;
+let score = 0
 
 function preload()
 {
@@ -27,7 +27,8 @@ function preload()
   Oof = loadSound("https://raw.githubusercontent.com/MrLeungVSA/y10-p5js-criterion-a-submission-y10-lai-long-sang-a/master/Images4code/roblox-death-sound-oof.mp3")
   quek = loadImage("https://raw.githubusercontent.com/MrLeungVSA/y10-p5js-criterion-a-submission-y10-lai-long-sang-a/master/Images4code/fa84fb21a5b6401.png")
   Hour = loadImage("https://raw.githubusercontent.com/MrLeungVSA/y10-p5js-criterion-a-submission-y10-lai-long-sang-a/master/Images4code/Starting.png")
-  beck = loadImage("https://raw.githubusercontent.com/MrLeungVSA/y10-p5js-criterion-a-submission-y10-lai-long-sang-a/master/Images4code/beck.png")
+  beck = loadImage("https://raw.githubusercontent.com/MrLeungVSA/y10-p5js-criterion-a-submission-y10-lai-long-sang-a/master/code%20img/New%20Piskel%20(1).png")
+  qback = loadImage("https://raw.githubusercontent.com/MrLeungVSA/y10-p5js-criterion-a-submission-y10-lai-long-sang-a/master/code%20img/New%20Piskel.png")
  // Hour = loadGif("Hourglass35.gif");
 }
 
@@ -50,21 +51,33 @@ function draw()
 	  fill(0,255,0)
 	  showQuestion()
 	  Health()
+    SCRE()
 	  if (mouseX > V - 50 && mouseX < V + 50 && mouseY > S && mouseY < S + 100 && mouseIsPressed)
 	  {
 	    Oof.play();
 	    round = 2
 	    gam ++
-
+      score += 50
 	    resetTiming()
 	  }
+        if (mouseX > R - 50 && mouseX < R + 50 && mouseY > F && mouseY < F + 100 && mouseIsPressed)
+    {
+      Oof.play();
+      round = 2
+      gam ++
+      fill(255,5,5)
+      text("Wrong Answer!",R+50,F+50)
+      fill(0,255,0)
+      deductHealth(50);
+      resetTiming()
+    }
 //	  Timing()
 	  nxt()
     bounce()
-	  dude(V,S,58,30,0)
-	  dude(R,F,0,255,0)
-    PlayerWalks()
-    dude(ball,balln,255,255,255)
+	  dude(V-20,S,58,30,0)
+    text("yes",V,S)
+	  dude(R-20,F,0,255,0)
+    text("no",R,F)
 	  cross()
 	  manageTime(0,400)
 	  drawHealth(-1)
@@ -87,6 +100,7 @@ function showQuestion()
 {
   textSize(20)
   strokeWeight(2)
+  image(qback,600-125,80)
   text(Question[Ques],600-100,300-100)
   if (Ques == 3){
   	Ques = 0
@@ -124,58 +138,29 @@ function resetTiming()
 	}
 
 }
-function PlayerWalks()
-{
-  if (ball >= mouseX)
-  {
-    ball -= ballrate;
-  }
-  else if (ball <= mouseX)
-  {
-    ball += ballrate;
 
-  }
-  if (balln <= mouseY)
-  {
-    balln +=ballrate;
-  }
-  else if (balln >= mouseY)
-  {
-    balln -=ballrate;
-  }
-}
 function bounce()
 {
-  /*
-  if (ball <= 1200 && balln == 100)
-  {
-    ball ++;
-  }
-  if (balln <= 600 && ball == 600)
-  {
-    balln ++;
-  }
-  if (balln == 600 && ball <= 100)
-  {
-    balln --;
-  }
-  if (ball == 100 && balln >= 100)
-  {
-    balln --;
-  }
-*/
+
+  var x = 320;
+  var y = 180;
   var xspeed = 5;
-  var yspeed = 5;
+  var yspeed = 2;
   var r = 25;
-  V += xspeed;
-  S += yspeed;
-  if (V > width - 50 || V < 50) {
+  x += xspeed;
+  y += yspeed;
+  if (x > width - r || x < r) {
     xspeed = -xspeed;
   }
-  if (S > height - 50 || S < 50) {
+  if (y > height - r || y < r) {
     yspeed = -yspeed;
   }
-  
+}
+
+function SCRE()
+{
+  textSize(50)
+  text("Score:"+score,0,150)
 }
 
 function nxt()
