@@ -45,6 +45,7 @@ function drawIntro()
 
 		if (mouseIsPressed)
 		{
+		Mode = 1
 		CanvasID = 3;
 		}
 		
@@ -60,6 +61,7 @@ function drawIntro()
 
 		if (mouseIsPressed)
 		{
+		Mode = 2
 		CanvasID = 3;
 		}
 		
@@ -75,6 +77,7 @@ function drawIntro()
 
 		if (mouseIsPressed)
 		{
+		Mode = 3
 		CanvasID = 3;
 		}
 		
