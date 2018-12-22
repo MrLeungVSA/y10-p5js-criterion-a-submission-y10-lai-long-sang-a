@@ -7,7 +7,7 @@ var R = 1
 var F = 1
 var GG = false
 var Oof 
-var Question = ["which is the correct syntax?","what is a arguement?","which is a parameter","What is a function"]
+var Question = ["which is the correct syntax?","what is a variable?","which is a javascript comment?","What data type is this?"]
 var Desround = ["Round 1","Round 2","Round 3","Round 4","Round 5","Round 6","Round 7","Final Round"]
 var gam = 0
 var Ques = 0

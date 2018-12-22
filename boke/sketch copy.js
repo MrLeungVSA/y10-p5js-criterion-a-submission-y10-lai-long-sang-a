@@ -7,10 +7,10 @@ var R = 1
 var F = 1
 var GG = false
 var Oof 
-var Question = ["which is the correct syntax?","Is an function a class?","which is a parameter","What is a function"]
+var Question = ["which is the correct syntax?","what is a variable?","which is a javascript comment?","What data type is true?","If var is blank, is it null?","Is\"123\"a string?","can you modify const?"]
 var Desround = ["Round 1","Round 2","Round 3","Round 4","Round 5","Round 6","Round 7","Final Round"]
-var Respond1 = ["Yes"]
-var Respond2 = ["No"]
+var right = ["var \"meme223\" = string","A container for data","//","Boolean","No","Yes","No"]
+var wrong = ["var string = \"meme223\"","A operator","--!>","Integer","Yes","No","Yes"]
 var gam = 0
 var Ques = 0
 var HP = 200
@@ -75,9 +75,9 @@ function draw()
 	  nxt()
     bounce()
 	  dude(V-20,S,58,30,0)
-    text("yes",V,S)
+    text(right[Ques],V,S)
 	  dude(R-20,F,0,255,0)
-    text("no",R,F)
+    text(wrong[Ques],R,F)
 	  cross()
 	  manageTime(0,400)
 	  drawHealth(-1)
@@ -102,7 +102,7 @@ function showQuestion()
   strokeWeight(2)
   image(qback,600-125,80)
   text(Question[Ques],600-100,300-100)
-  if (Ques == 3){
+  if (Ques > 7){
   	Ques = 0
   }
 }
