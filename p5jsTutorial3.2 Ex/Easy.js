@@ -61,7 +61,4 @@ function drawEasy()
 	fill(rainbow.R,rainbow.G,rainbow.B)
 	stroke(rainbow.R,rainbow.G,5)
 	ellipse(mouseX,mouseY,20,20);
-
-	console.log(mouseX);
-	console.log(mouseY);
 }

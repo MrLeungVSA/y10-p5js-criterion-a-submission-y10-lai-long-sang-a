@@ -6,6 +6,8 @@ Canvas ID == 4 == Hard
 
 */
 var CanvasID;
+var Mode = 0 
+
 
 function preload()
 {
@@ -14,6 +16,7 @@ function preload()
 	preloadEasy();
 	preloadHArd();
 	preloadTutorial();
+	preloadVariable();
 }
 
 function setup()
@@ -23,6 +26,7 @@ function setup()
 	setupEasy();
 	setupHArd();
 	setupTutorial();
+	setupVariable();
 
 	CanvasID = 1;
 
@@ -59,12 +63,17 @@ function draw()
 
 	if (CanvasID == 6)
 	{
-		drawShooter();
+		drawVariable();
 	}
 
 	if (CanvasID == 7)
 	{
 		drawTutorial();
+	}
+
+	if (CanvasID == 8)
+	{
+		drawShooter();
 	}
 }
 
