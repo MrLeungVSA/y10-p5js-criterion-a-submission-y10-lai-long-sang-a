@@ -16,7 +16,7 @@ function preload()
 	preloadEasy();
 	preloadHArd();
 	preloadTutorial();
-	preloadVariable();
+	preloadShooter();
 }
 
 function setup()
@@ -26,8 +26,7 @@ function setup()
 	setupEasy();
 	setupHArd();
 	setupTutorial();
-	setupVariable();
-
+	setupShooter();
 	CanvasID = 1;
 
 	createCanvas(1200,600);

@@ -15,7 +15,7 @@ var gam = 0
 var Ques = 0
 var HP = 200
 var quek
-var canvasID
+var Can
 var Hour
 var beck
 let score = 0
@@ -40,12 +40,12 @@ function setupShooter()
   setupHealth()
   setupTimer()
 
-  canvasID = 0;
+  Can = 0;
 }
 
 function drawShooter()
 {
-  if (canvasID == 0)
+  if (Can == 0)
   {
 	  background(beck)
 	  fill(0,255,0)
@@ -83,7 +83,7 @@ function drawShooter()
 	  drawHealth(-1)
   }
 
-  if (canvasID == -1){
+  if (Can == -1){
     textSize(32)
     strokeWeight(5)
     textSize(200)

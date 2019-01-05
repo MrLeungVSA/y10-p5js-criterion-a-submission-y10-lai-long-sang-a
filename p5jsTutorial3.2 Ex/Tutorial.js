@@ -2,6 +2,8 @@ var pageN = 0
 var page
 let timer = 1
 let turn = false
+var ARR = 0
+var pegg
 
 function preloadTutorial()
 {
@@ -13,7 +15,7 @@ function preloadTutorial()
   page[4] = loadImage("https://raw.githubusercontent.com/MrLeungVSA/y10-p5js-criterion-a-submission-y10-lai-long-sang-a/master/code%20img/4.png");
   page[5] = loadImage("https://raw.githubusercontent.com/MrLeungVSA/y10-p5js-criterion-a-submission-y10-lai-long-sang-a/master/code%20img/4.png");
 
-  pegg = new Array(Scroll);
+  pegg = new Array(ARR);
   pegg[0] = loadImage("https://raw.githubusercontent.com/MrLeungVSA/y10-p5js-criterion-a-submission-y10-lai-long-sang-a/master/code%20img/one.png");
   pegg[1] = loadImage("https://raw.githubusercontent.com/MrLeungVSA/y10-p5js-criterion-a-submission-y10-lai-long-sang-a/master/code%20img/one.png");
   pegg[2] = loadImage("https://raw.githubusercontent.com/MrLeungVSA/y10-p5js-criterion-a-submission-y10-lai-long-sang-a/master/code%20img/two.png");
